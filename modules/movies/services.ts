@@ -27,7 +27,8 @@ export async function getByTitle(string: string): Promise<Movie[] | undefined> {
     const dbObject = await getDbConnection();
 
     if (!dbObject?.db) {
-      throw Error("Couldn't connect to db");
+      console.log("Couldn't connect to db");
+      return undefined;
     }
 
     const db = dbObject.db;
@@ -41,5 +42,6 @@ export async function getByTitle(string: string): Promise<Movie[] | undefined> {
     return movies;
   } catch (error) {
     console.log("Couldn't fetch the movies");
+    return undefined;
   }
 }

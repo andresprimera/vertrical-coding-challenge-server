@@ -36,7 +36,8 @@ function getByTitle(string) {
         try {
             const dbObject = yield (0, db_1.getDbConnection)();
             if (!(dbObject === null || dbObject === void 0 ? void 0 : dbObject.db)) {
-                throw Error("Couldn't connect to db");
+                console.log("Couldn't connect to db");
+                return undefined;
             }
             const db = dbObject.db;
             const client = dbObject.client;
@@ -49,6 +50,7 @@ function getByTitle(string) {
         }
         catch (error) {
             console.log("Couldn't fetch the movies");
+            return undefined;
         }
     });
 }
