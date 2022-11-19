@@ -6,7 +6,7 @@ const moviesRouter = express.Router();
 
 moviesRouter.get("/:query?", async (req: Request, res: Response) => {
   const query = req?.params?.query;
-  console.log({ query });
+
   const response = await searchMovies(query);
 
   res.send({

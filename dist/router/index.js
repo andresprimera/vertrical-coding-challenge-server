@@ -16,7 +16,7 @@ const express_1 = __importDefault(require("express"));
 const routes_1 = __importDefault(require("../modules/movies/routes"));
 const router = express_1.default.Router();
 router.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    res.send("The server is running");
+    res.send({ response: "The server is running" });
 }));
 router.use("/movies", routes_1.default);
 exports.default = router;

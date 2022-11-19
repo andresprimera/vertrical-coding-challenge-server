@@ -18,7 +18,6 @@ const moviesRouter = express_1.default.Router();
 moviesRouter.get("/:query?", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     const query = (_a = req === null || req === void 0 ? void 0 : req.params) === null || _a === void 0 ? void 0 : _a.query;
-    console.log({ query });
     const response = yield (0, resolvers_1.searchMovies)(query);
     res.send({
         response,
