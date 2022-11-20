@@ -1,9 +1,11 @@
-import express, { Express, Request, Response } from "express";
+import express, { Express } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import router from "./router";
 
 dotenv.config();
+
+console.log("env variables =>", process.env.NODE_ENV, process.env.PORT);
 
 export const app: Express = express();
 

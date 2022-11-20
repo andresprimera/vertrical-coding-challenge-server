@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { getByTitle } from "./services";
+import { getByTitle } from "./movies.services";
 
 export async function searchMovies(req: Request, res: Response) {
   try {

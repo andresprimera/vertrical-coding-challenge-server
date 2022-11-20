@@ -1,6 +1,6 @@
 import { closeDbConnection, getDbConnection } from "../../db";
 
-import Movie from "./models";
+import Movie from "./movies.models";
 
 export async function getMovies() {
   try {

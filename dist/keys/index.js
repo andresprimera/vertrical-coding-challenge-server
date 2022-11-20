@@ -1,10 +1,17 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.port = exports.mongoDbUrl = void 0;
-const dotenv_1 = __importDefault(require("dotenv"));
-dotenv_1.default.config();
-exports.mongoDbUrl = process.env.MONGODB_URL;
-exports.port = process.env.PORT;
+function default_1(something) {
+    switch (something) {
+        case "one":
+            console.log("One");
+            // do something
+            break;
+        case "hello":
+            console.log("Hello");
+            // do something else
+            break;
+        default:
+        // default here
+    }
+}
+exports.default = default_1;

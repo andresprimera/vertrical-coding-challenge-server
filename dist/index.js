@@ -9,6 +9,7 @@ const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const router_1 = __importDefault(require("./router"));
 dotenv_1.default.config();
+console.log("env variables =>", process.env.NODE_ENV, process.env.PORT);
 exports.app = (0, express_1.default)();
 const port = process.env.PORT;
 exports.app.use((0, cors_1.default)());
